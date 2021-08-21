@@ -25,6 +25,3 @@ class Connection
         }
     }
 }
-
-$conn = new Connection('1', '1', '1', '1');
-$conn::connMysql();
