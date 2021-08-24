@@ -17,13 +17,13 @@ class Payload
     private static function bearerToken()
     {
         $payload = array(
-            "iss" => "http://example.org",
-            "aud" => "http://example.com",
+            "iss" => "https://zuknet.com",
+            "aud" => "https://zuknet.com",
             "email" => self::$email,
             "iat" => 1356999524,
             "nbf" => 1357000000
         );
-
+        http_response_code(201);
         echo json_encode(array("bearerToken" => JWT::encode($payload, PAYLOAD_KEY)));
     }
 }
